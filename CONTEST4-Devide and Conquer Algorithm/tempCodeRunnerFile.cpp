@@ -1,6 +1,6 @@
 
-   	// while(t--){
-    //        int n;cin>>n;int a[n];
-    //        for(int i=0;i<n;i++) cin>>a[i];
-    //         cout<<findSubsetMax(a,0,n-1)<<endl;
-    // }
+    // #ifndef ONLINE_JUDGE
+    //     freopen("input.txt","r",stdin);
+    //     freopen("output.txt","w",stdout);
+    // #endif
+    // for (int i = 0 ; i < 50; i++) pw.push_back(power(2, i));

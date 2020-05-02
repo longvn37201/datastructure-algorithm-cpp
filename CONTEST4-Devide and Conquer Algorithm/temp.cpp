@@ -1,39 +1,31 @@
+// Để thêm một phần tử vào vị trí sau cùng của vector:
+// name_of_vector.push_back(name_of_element);
 
-using namespace std;  
-const int maxn=1000010;  
-int num[maxn],temp[maxn],n;  
-bool judge(int mid){  
-    if(mid<(n+1)/2)return false;  
-    for(int i=mid+1;i<=n;++i){  
-        if(num[i]*2>num[i-mid])return false;  
-    }  
-    return true;  
-}  
-bool cmp(int a,int b){  
-    return a>b;  
-}  
-int main()  
-{  
-    scanf("%d",&n);  
-    for(int i=1;i<=n;++i){  
-        scanf("%d",&num[i]);  
-    }  
-    sort(num+1,num+n+1,cmp);  
-    for(int i=1;i<=n;i++) cout<<num[i]<<" ";
+// Để bỏ đi phần tử cuối cùng của vector:
+// name_of_vector.pop_back();
 
-    int left=1,right=n,ans;  
-    
-    while(left<=right){  
-        int mid=(left+right)/2;  
-        if(judge(mid)){  
-            ans=mid;  
-            right=mid-1;  
-        }  
-        else {  
-            left=mid+1;  
-        }  
-    }  
-    printf("%d\n",ans);  
-    return 0;  
-}
-//28
+// Để bỏ đi tất cả các phần tử của vector:
+// name_of_vector.clear();
+
+// Để lấy ra phần tử đầu tiên của vector:
+// name_of_vector.front();
+
+// Để lấy ra phần tử cuối cùng của vector:
+// name_of_vector.back();
+
+// Để lấy ra phần tử vị trí thứ n của vector (đếm từ 0):
+// name_of_vector.at(n);
+
+// Để biết số lượng phần tử của vector:
+// name_of_vector.size();
+
+// Để biết vector có phần tử hay không:
+// name_of_vector.empty();
+
+// Để duyệt vector bằng iterator:
+// vector<integer>::iterator iter_name; // Khai báo con trỏ để duyệt
+// for (iter_name = name_of_vector.begin(); iter_name != name_of_vector.end(); iter_name++) {
+// cout << *iter_name << endl;
+// }
+
+// Chú ý, sau khi bạn dùng áp dụng toán tử ++ vào biến iterator, nó sẽ chỉ đến phần tử tiếp theo của vector. Còn toán tử * (value of) cho biết giá trị của phần tử mà con trỏ iterator đang trỏ tới.
