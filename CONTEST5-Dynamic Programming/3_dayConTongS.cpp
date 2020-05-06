@@ -15,7 +15,7 @@ bool something(){
     //                         L[t]:=1;
     for(int i=1;i<=n;i++){
         for(int j=sum;j>=a[i];j--){
-            if(mark[j]==0&&mark[j-a[i]]==1) mark[j]=1; 
+            if(mark[j-a[i]]==1) mark[j]=1; 
             if(mark[sum]==1) return true;
         }
     } return false;
