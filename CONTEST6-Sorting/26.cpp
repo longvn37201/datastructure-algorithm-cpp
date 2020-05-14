@@ -11,16 +11,12 @@ int main(){
             cin>>a[i];
         }
         for(int i=1;i<len;i++){
-            int MIN=INT_MAX,index=i;
             for(int j=i+1;j<=len;j++){
-                if(a[j]<MIN){
-                    MIN=a[j];
-                    index=j;
-                }
+                if(a[j]<a[i])
+                    swap(a[j],a[i]);
             }
-            swap(a[i],a[index]);
             cout<<"Buoc "<<i<<": ";
-            for(int i=1;i<=len;i++) cout<<a[i]<<" ";
+            for(int j=1;j<=len;j++) cout<<a[j]<<" ";
             cout<<endl;
         }
         // cout<<mark<<endl;
