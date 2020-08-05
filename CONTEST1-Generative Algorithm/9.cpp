@@ -24,7 +24,7 @@ void bin()
 void binToGray()
 {
     binary[0]=0;
-    for(int i=1;i<=n;i++) gray[i]=binary[i]^binary[i-1];
+    for(int i=1;i<=n;i++) cout<<binary[i]^binary[i-1];
 
 }
 int main()

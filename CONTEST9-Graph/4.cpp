@@ -1,6 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 string s; 
+
+// int STOI(string temp){
+//     int res=0; 
+//     for(int i=0;i<temp.size();i++){
+//         res=res*10+ int(temp[i]-'0');
+//     }
+//     return res;
+// }
+
 main(){
    int n; cin>>n;
    getline(cin,s);

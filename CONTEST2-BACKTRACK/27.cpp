@@ -1,32 +1,33 @@
+
+
+
+
 #include <iostream>
 using namespace std;
 
 //b[] mark 1,2,3...k chia thanh k tap con cua n
-//testCase= co the chia? 
+//testCase= co the chia?
 int a[50],visited[50], n, k, sum,testCase;
 
-void fuckingServer(int index,int soTap,int testSum){
+void fuckingServer(int soTap,int testSum){
 
     if(soTap==k-1) testCase++;
 
     if(testCase) return;
-    
-    for(int j=index;j<=n;j++){
-        if(visited[j]) continue;
-        
-        testSum+=a[j];visited[j]=1;
 
-        if(testSum==sum) {soTap++; testSum=0;}
-        
-        if(testSum<=sum){
-            fuckingServer(index+1,soTap,testSum);
+    for(int j=1;j<=n;j++){
+        if(!visited[j]){
+            testSum+=a[j];
+            visited[j]=1;
+            if(testSum==sum) {soTap++;testSum=0;}
+            if(testSum<sum) fuckingServer(soTap,testSum);
+            testSum-=a[j]; visited[j]=0;
         }
-        testSum-=a[j]; visited[j]=0;
-        
-        
+
+
     }
 
-    
+
 }
 
 main(){
@@ -40,9 +41,9 @@ main(){
         else if(sum%k!=0);
             else{
                     sum/=k;
-                    fuckingServer(1,0,0); 
+                    fuckingServer(0,0);
             }
 
-        testCase? cout<<1: cout<<0; cout<<endl;    
+        testCase? cout<<1: cout<<0; cout<<endl;
     }
 }
