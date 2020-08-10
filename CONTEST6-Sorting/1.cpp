@@ -26,7 +26,8 @@ main(){
     int t;cin>>t;
     while(t--){
         cin>>n; for(int i=1;i<=n;i++) cin>>arr[i];
-        quickSort(1,n);
+        // quickSort(1,n);
+        sort(arr+1,arr+n+1);
         int l=1,r=n;
         while(l<=r){
             if(l==r) cout<<arr[l++];

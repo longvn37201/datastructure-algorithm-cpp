@@ -36,7 +36,8 @@ int main(){
             cin>>a[i];
         // for(long long i=0;i<len222;i++)
         //     cin>>b[i];
-        mergeSort(a,0,len111+len222-1);
+        // mergeSort(a,0,len111+len222-1);
+        stable_sort(a,a+len111+len222);
         // mergeSort(b,0,len222-1);
         // sort(a,a+n);
         // sort(b,b+n);

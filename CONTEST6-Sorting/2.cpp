@@ -26,7 +26,9 @@ void mergeSort(int l,int r){
     }
 }
 
-
+bool sosanh(int a1,int a2){
+     return abs(a1-x)<abs(a2-x);
+}
 
 int main(){
     int t; cin>>t;
@@ -34,7 +36,8 @@ int main(){
         cin>>n>>x;
         for(int i=0;i<n;i++)
             cin>>a[i];
-        mergeSort(0,n-1);
+            stable_sort(a,a+n,sosanh);
+        // mergeSort(0,n-1);
         // quickSort(0,n-1);
         for(int i=0; i<n; i++) cout <<a[i]<<" ";
 		cout <<endl;

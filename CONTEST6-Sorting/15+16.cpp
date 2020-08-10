@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int n,x, a[100000];
+//4 1 3 9 7
 
 void merge(int l,int m,int r){
     int len1=m-l+1,len2=r-m;
@@ -34,7 +35,8 @@ int main(){
         cin>>n;
         for(int i=0;i<n;i++)
             cin>>a[i];
-        mergeSort(0,n-1);
+        // mergeSort(0,n-1);
+        sort(a,a+n);
         // quickSort(0,n-1);
         for(int i=0; i<n; i++) cout <<a[i]<<" ";
 		cout <<endl;

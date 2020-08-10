@@ -31,18 +31,22 @@ void mergeSort(long long a[], long long l,long long r){
 int main(){
     long long t; cin>>t;
     while(t--){
-        cin>>len111>>len222;
-        for(long long i=0;i<len111;i++)
+        cin>>len111>>len222;long long MAX=INT_MIN,MIN=INT_MAX;
+        for(long long i=0;i<len111;i++){
             cin>>a[i];
-        for(long long i=0;i<len222;i++)
+            MAX=max(a[i],MAX);
+        }
+        for(long long i=0;i<len222;i++){
             cin>>b[i];
-        mergeSort(a,0,len111-1);
-        mergeSort(b,0,len222-1);
-        // sort(a,a+n);
-        // sort(b,b+n);
+            MIN=min(b[i],MIN);
+        }
+        // mergeSort(a,0,len111-1);
+        // mergeSort(b,0,len222-1);
+        // // sort(a,a+n);
+        // // sort(b,b+n);
+        // // cout<<a[len111-1]*b[0];
         // cout<<a[len111-1]*b[0];
-        cout<<a[len111-1]*b[0];
         // quickSort(0,n-1);
-		cout <<endl;
+		cout <<MAX*MIN<<endl;
     }
 }

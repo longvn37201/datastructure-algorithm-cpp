@@ -10,7 +10,7 @@ main(){
                 if(b[i]>b[j]){swap(b[i],b[j]);swap(a[i],a[j]);}
         int count=1;
         int i=0;
-        for(int j=i+1;j<n;j++)
+        for(int j=1;j<n;j++)
             if(a[j]>=b[i]){
                 i=j;
                 count++;

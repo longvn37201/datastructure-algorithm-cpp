@@ -7,6 +7,7 @@ main(){
 		int a[n+1],run=n-1,run2=n; for(int i=1;i<=n;++i)  cin>>a[i];
 		
 		while(run&&a[run]>a[run+1]) run--;
+		
 		if(run){
 			while(a[run2]<a[run]){
 				run2--;
